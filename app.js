@@ -36,4 +36,6 @@ const server = http.createServer((req, res) => {
   res.setHeader("Content-Type", "text/html");
 });
 
-server.listen(3000);
+server.listen(process.env.PORT, () => {
+  console.log(`Listening on ${process.env.PORT}`);
+});
